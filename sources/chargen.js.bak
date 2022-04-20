@@ -527,11 +527,7 @@ $(document).ready(function() {
     return images[imgRef];
     else {
       var img = new Image();
-	  if ($("#standard").prop("checked")) {
-		img.src = "spritesheets/" + imgRef;
-	  } else if ($("#gun").prop("checked")) {
-		img.src = "gun_spritesheets/" + imgRef;
-      }
+      img.src = "spritesheets/" + imgRef;
       img.onload = redraw;
       images[imgRef] = img;
       return img;
@@ -545,11 +541,7 @@ $(document).ready(function() {
     } else {
 
       var img = new Image();
-	  if ($("#standard").prop("checked")) {
-		img.src = "spritesheets/" + imgRef;
-	  } else if ($("#gun").prop("checked")) {
-		img.src = "gun_spritesheets/" + imgRef;
-      }
+      img.src = "spritesheets/" + imgRef;
       img.onload = function() { callback(img) };
       images[imgRef] = img;
       return img;
